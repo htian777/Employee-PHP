@@ -40,7 +40,7 @@
       <a href="/display.html">Display</a>
     </div>
   </div>
-    <div class="row">
+    <div style="background-color:hsla(89,43%,51%,0.3);" class="row">
       <div class="col-sm-4">
       </div>
       <div class="col-sm-4">
@@ -49,27 +49,27 @@
           <table>
           <tr>
             <th>Name:</th>
-            <th><input type="text" name="name" /></th>
+            <th><input type="text" name="name" required/></th>
           </tr>
           <tr>
             <th>E-mail:</th>
-            <th><input type="text" name="email" /></th>
+            <th><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/></th>
           </tr>
           <tr>
             <th>Position:</th>
-            <th><input type="text" name="position" /></th>
+            <th><input type="text" name="position" required/></th>
           </tr>
           <tr>
             <th>Phone Number:</th>
-            <th><input type="text" name="phone" /></th>
+            <th><input type="text" name="phone"/></th>
           </tr>
           <tr>
             <th>Salary:</th>
-            <th><input type="text" name="salary" /></th>
+            <th><input type="text" name="salary" required/></th>
           </tr>
           <tr>
             <th>Date Hired:</th>
-            <th><input style="width: 100%;" type="date" name="date" /></th>
+            <th><input style="width: 100%;" type="date" name="date" required/></th>
           </tr>
           <tr>
             <th></th>

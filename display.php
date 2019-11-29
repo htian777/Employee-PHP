@@ -12,7 +12,7 @@ if($con->connect_error){
 $sql = "SELECT * FROM EMPLOYEE";
 $result = $con->query($sql);
 
-echo "<table border='1' >
+echo "<table style='width:100%'' border='1' >
 <tr>
 <td align=center> <b>Name</b></td>
 <td align=center><b>E-mail</b></td>
