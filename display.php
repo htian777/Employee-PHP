@@ -1,4 +1,5 @@
 <?php
+// DB connection
 $servername='localhost';
 $username='test';
 $password='Test123$';
@@ -8,10 +9,10 @@ $con = new mysqli($servername,$username,$password,$dbname);
 if($con->connect_error){
   echo "connection error: ".$con->connect_error;
 }
-
+// execute query and save result
 $sql = "SELECT * FROM EMPLOYEE";
 $result = $con->query($sql);
-
+// construct table for container
 echo "<table style='width:100%'' border='1' >
 <tr>
 <td align=center> <b>Name</b></td>
@@ -29,6 +30,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
+// finish up the tble
 echo "</tr></table>";
 $con->close();
 ?>
