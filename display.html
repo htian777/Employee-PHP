@@ -1,0 +1,71 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+  .topnav {
+  overflow: hidden;
+  background-color: #333;
+  }
+
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+  .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+</style>
+
+<script type="text/javascript">
+ $(document).ready(function() {
+    $("#display").click(function() {
+      $.ajax({
+        type: "GET",
+        url: "display.php",
+        dataType: "html",
+        success: function(response){
+            $("#container").html(response);
+        }
+    });
+});
+});
+
+</script>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="topnav">
+      <a href="/index.html" >Insert</a>
+      <a class="active" href="/display.html">Display</a>
+    </div>
+  </div>
+  <div class="row">
+      <h1 align="center">Employee Information</h1>
+      <table align="center">
+        <tr>
+          <td><input type="button" id="display" value="Display All"/></td>
+        </tr>
+      </table>
+  </div>
+  <div class="row" id="container" align="center">
+  </div>
+</div>
+
+</body>
+</html>

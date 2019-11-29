@@ -1,0 +1,90 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<style>
+  .topnav {
+  overflow: hidden;
+  background-color: #333;
+  }
+
+  .topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  }
+
+  .topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  }
+
+  .topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+  }
+</style>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="topnav">
+      <a class="active" href="/index.html" >Insert</a>
+      <a href="/display.html">Display</a>
+    </div>
+  </div>
+    <div class="row">
+      <div class="col-sm-4">
+      </div>
+      <div class="col-sm-4">
+        <center><h1>Information Form</h1></center>
+        <form action="insert.php" method="post">
+          <table>
+          <tr>
+            <th>Name:</th>
+            <th><input type="text" name="name" /></th>
+          </tr>
+          <tr>
+            <th>E-mail:</th>
+            <th><input type="text" name="email" /></th>
+          </tr>
+          <tr>
+            <th>Position:</th>
+            <th><input type="text" name="position" /></th>
+          </tr>
+          <tr>
+            <th>Phone Number:</th>
+            <th><input type="text" name="phone" /></th>
+          </tr>
+          <tr>
+            <th>Salary:</th>
+            <th><input type="text" name="salary" /></th>
+          </tr>
+          <tr>
+            <th>Date Hired:</th>
+            <th><input style="width: 100%;" type="date" name="date" /></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th ><input  style="margin-top:25px;" type="submit" /></th>
+          </tr>
+          </table>
+        </form>
+      </div>
+      <div class="col-sm-4">
+      </div>
+    </div>
+    <div class="row">
+
+    </div>
+</div>
+
+</body>
+</html>
