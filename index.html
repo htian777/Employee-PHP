@@ -33,6 +33,12 @@
 </style>
 
 <body>
+  <script>
+    function clearform() {
+    document.getElementById("empform").reset();
+    }
+  </script>
+  <iframe name="votar" style="display:none;"></iframe>
 <div class="container">
   <div class="row">
     <div class="topnav">
@@ -45,11 +51,11 @@
       </div>
       <div class="col-sm-4">
         <center><h1>Employee Form</h1></center>
-        <form action="insert.php" method="post">
+        <form id="empform" action="insert.php" method="post" target="votar">
           <table>
           <tr>
             <th>Name:</th>
-            <th><input type="text" name="name" required/></th><th>*</th>
+            <th><input type="text" name="name" autofocus="autofocus" onfocus="this.select()" required/></th><th>*</th>
           </tr>
           <tr>
             <th>E-mail:</th>
@@ -73,7 +79,11 @@
           </tr>
           <tr>
             <th></th>
-            <th ><input  style="margin-top:25px;" type="submit" /></th>
+            <th ><input  style="margin-top:25px;width:100%;" type="submit" value="SUBMIT"/></th>
+          </tr>
+          <tr>
+            <th></th>
+            <th><input style="background-color:orange; width:100%;" type="button" onclick="clearform()" value="Reset form"></th>
           </tr>
           </table>
         </form>

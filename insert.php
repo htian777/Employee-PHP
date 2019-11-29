@@ -21,10 +21,13 @@ $salary = $_POST[salary];
 $date = $_POST[date];
 // execute and check prepared statement
 if ($stmt->execute()) {
-    include 'index.html';
     echo "<script>alert('A new record for ".$_POST[name]." was added succesfully.')</script>";
-} else {
-    echo "Insertion Error!";
+} else {// Exception handler
+    if(strpos($stmt->error,"Duplicate entry")!==false){
+      echo "<script>alert('Opps,the email already exists in the system!')</script>";
+    }else{
+      echo "<script>alert('Unexpected error: '".$stmt->error.")</script>";
+    }
 }
 
 $stmt->close();
