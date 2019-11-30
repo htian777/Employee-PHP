@@ -10,7 +10,7 @@ if($con->connect_error){
   echo "connection error: ".$con->connect_error;
 }
 // execute query and save result
-$sql = "SELECT * FROM EMPLOYEE";
+$sql = "SELECT * FROM EMPLOYEE ORDER BY date ASC";
 $result = $con->query($sql);
 // construct table for container
 echo "<table style='width:100%'' border='1' >
