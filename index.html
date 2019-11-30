@@ -1,7 +1,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
@@ -30,6 +30,16 @@
   background-color: #4CAF50;
   color: white;
   }
+
+  table {
+  boarder-collapse: collapse;  
+  }
+
+  th {
+  border-top:10px solid transparent;
+  border-bottom:10px solid transparent;
+  border-right:15px solid transparent;
+  }
 </style>
 
 <body>
@@ -53,29 +63,29 @@
         <center><h1>Employee Form</h1></center>
         <form id="empform" action="insert.php" method="post" target="votar">
           <table>
-          <tr>
+          <tr class="bar">
             <th>Name:</th>
             <th><input type="text" name="name" autofocus="autofocus" onfocus="this.select()" required/></th><th>*</th>
           </tr>
-          <tr>
+          <tr class="bar">
             <th>E-mail:</th>
             <th><input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/></th><th>*</th>
           </tr>
-          <tr>
+          <tr class="bar">
             <th>Position:</th>
             <th><input type="text" name="position" required/></th><th>*</th>
           </tr>
-          <tr>
+          <tr class="bar">
             <th>Phone Number:</th>
             <th><input type="text" name="phone"/></th>
           </tr>
-          <tr>
+          <tr class="bar">
             <th>Salary:</th>
             <th><input type="text" name="salary" required/></th><th>*</th>
           </tr>
-          <tr>
+          <tr class="bar">
             <th>Date Hired:</th>
-            <th><input style="width: 100%;" type="date" name="date" required/></th><th>*</th>
+            <th><input style="min-width:90%;width:100%" type="date" name="date" required/></th><th>*</th>
           </tr>
           <tr>
             <th></th>
